@@ -1,0 +1,14 @@
+- name: 主页
+  link: /index.html
+- name: 学习科研
+  link: /study.html
+- name: 学生工作
+  link: /student.html
+- name: 社会实践
+  link: /practice.html
+- name: 志愿服务
+  link: /volunteer.html
+- name: 文体活动
+  link: /activity.html
+- name: 个人兴趣
+  link: /development.html
