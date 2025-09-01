@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <title>学习科研</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="assets/css/headerstyle.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/blogstyle.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+        <link rel="icon" href="/introduction/imgs/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/introduction/assets/css/headerstyle.css" />
+        <link rel="stylesheet" type="text/css" href="/introduction/assets/css/blogstyle.css" />
+        <link rel="stylesheet" type="text/css" href="/introduction/assets/css/animate.css" />
     </head>
     <body>
         <div class="header">
@@ -49,11 +50,23 @@
     
 </div>
         <div class="stackedit__html">
-            <h1>学习科研666</h1>
-<h2>科研竞赛经历</h2>
-<p>主要方向：微电网建模与优化<br>具体参赛情况暂略</p>
+            <div id="markdown-content"></div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    #markdown-content li {
+        font-size: 18px;
+    }
+</style>
+<script>
+    // 动态加载并渲染 Markdown 文件
+    fetch('markdown/study.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('markdown-content').innerHTML = marked.parse(text);
+        })
+        .catch(error => console.error('加载 Markdown 文件失败:', error));
+</script>
         </div>
     </body>
 </html>

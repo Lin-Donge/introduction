@@ -2,5 +2,20 @@
 layout: default
 title: 联系信息
 ---
-<h1>联系信息</h1>
+<div id="markdown-content"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    #markdown-content li {
+        font-size: 18px;
+    }
+</style>
+<script>
+    // 动态加载并渲染 Markdown 文件
+    fetch('markdown/contact.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('markdown-content').innerHTML = marked.parse(text);
+        })
+        .catch(error => console.error('加载 Markdown 文件失败:', error));
+</script>

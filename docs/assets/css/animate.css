@@ -14,15 +14,15 @@
 /* 移除了导航栏的动画效果 */
 
 main {
-    animation: fadeInDown 0.7s 0.5s both;
+    animation: fadeInDown 0.5s 0.4s both;
 }
 
 h1, h2 {
-    animation: fadeInDown 0.7s 0.6s both;
+    animation: fadeInDown 0.5s 0.48s both;
 }
 
 .stackedit__html {
-    animation: fadeInDown 0.7s 0.75s both;
+    animation: fadeInDown 0.5s 0.6s both;
 }
 
 /* 确保动画只在页面加载时播放一次 */

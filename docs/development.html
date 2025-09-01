@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <title>个人兴趣</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="assets/css/headerstyle.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/blogstyle.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+        <link rel="icon" href="/introduction/imgs/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/introduction/assets/css/headerstyle.css" />
+        <link rel="stylesheet" type="text/css" href="/introduction/assets/css/blogstyle.css" />
+        <link rel="stylesheet" type="text/css" href="/introduction/assets/css/animate.css" />
     </head>
     <body>
         <div class="header">
@@ -49,14 +50,23 @@
     
 </div>
         <div class="stackedit__html">
-            <h1>个人兴趣666</h1>
-<h2>其他</h2>
-<p>荣昶储才计划：<br>第九期成员<br>全球发展：<br>Movers<br>2025上海交通大学全球胜任力青年训练营<br>瑞士工作坊</p>
+            <div id="markdown-content"></div>
 
-
-<h2>公众号</h2>
-<h3>具体文章可见动量小站</h3>
-<p>此部分主要汇总并分类了我的公众号文章<br>关于公众号：<br>个人感受：<br>个人经历：<br>时事评论：<br>纯属整活：</p>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    #markdown-content li {
+        font-size: 18px;
+    }
+</style>
+<script>
+    // 动态加载并渲染 Markdown 文件
+    fetch('markdown/development.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('markdown-content').innerHTML = marked.parse(text);
+        })
+        .catch(error => console.error('加载 Markdown 文件失败:', error));
+</script>
         </div>
     </body>
 </html>

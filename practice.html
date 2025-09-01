@@ -2,7 +2,20 @@
 layout: default
 title: 社会实践
 ---
-<h1>社会实践666</h1>
-<h2>社会实践经历</h2>
-<p>3次云南洱源实践经历（2024暑期社会实践，第八期、第十二期荣昶讲坛）</p>
+<div id="markdown-content"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    #markdown-content li {
+        font-size: 18px;
+    }
+</style>
+<script>
+    // 动态加载并渲染 Markdown 文件
+    fetch('markdown/practice.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('markdown-content').innerHTML = marked.parse(text);
+        })
+        .catch(error => console.error('加载 Markdown 文件失败:', error));
+</script>

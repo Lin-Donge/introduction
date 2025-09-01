@@ -2,8 +2,20 @@
 layout: default
 title: 学生工作
 ---
-<h1>学生工作666</h1>
-<h2>学生工作经历</h2>
-<p>2025.2至今 上海交通大学智慧能源创新学院学生会 宣传部部长<br>2024.12至今 上海交通大学学生联合会 秘书处负责人<br>2024.2-2024.12 上海交通大学学生联合会 秘书处干事<br>2025.2至今 班级班长<br>2023.12-2025.2 班级组织委员<br>2023.9-2023.11 班级学习委员</p>
-<p>主要参与工作：<br>2025.3至今 学联月度之星考评工作（负责人）<br>2025.2 学联招新（负责人）<br>2024.12 学联星火学生骨干培养工程<br>2024.11 校第三十六届学生代表大会<br>2024.8 校2024级本科生开学典礼<br>2024.8 2024新生骨干训练营<br>2024.7 2024新生攻略编写<br>2024.6 访谈报告撰写</p>
+<div id="markdown-content"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    #markdown-content li {
+        font-size: 18px;
+    }
+</style>
+<script>
+    // 动态加载并渲染 Markdown 文件
+    fetch('markdown/student.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('markdown-content').innerHTML = marked.parse(text);
+        })
+        .catch(error => console.error('加载 Markdown 文件失败:', error));
+</script>

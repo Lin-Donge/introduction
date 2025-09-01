@@ -2,7 +2,20 @@
 layout: default
 title: 志愿服务
 ---
-<h1>志愿服务666</h1>
-<h2>志愿服务经历</h2>
-<p>截止2025.7，劳动学时总和：151小时<br>截止2025.7，公益服务时间总和：3个月<br>主要志愿服务经历：<br>春日雅集志愿者、交大人节志愿者、李叔同杯志愿者、学院毕业典礼志愿者</p>
+<div id="markdown-content"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    #markdown-content li {
+        font-size: 18px;
+    }
+</style>
+<script>
+    // 动态加载并渲染 Markdown 文件
+    fetch('markdown/volunteer.md')
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById('markdown-content').innerHTML = marked.parse(text);
+        })
+        .catch(error => console.error('加载 Markdown 文件失败:', error));
+</script>
