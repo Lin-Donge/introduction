@@ -1,0 +1,33 @@
+/* 渐入动画效果 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* 页面主要元素的渐入效果 */
+/* 移除了导航栏的动画效果 */
+
+main {
+    animation: fadeInDown 0.7s 0.5s both;
+}
+
+h1, h2 {
+    animation: fadeInDown 0.7s 0.6s both;
+}
+
+.stackedit__html {
+    animation: fadeInDown 0.7s 0.75s both;
+}
+
+/* 确保动画只在页面加载时播放一次 */
+@media (prefers-reduced-motion: reduce) {
+    main, h1, h2, .stackedit__html {
+        animation: none;
+    }
+}
