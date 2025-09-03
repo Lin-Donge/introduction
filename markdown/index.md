@@ -2,12 +2,14 @@
 ## 基础信息
 
 <img src="/introduction/imgs/photo.jpg" style="width: 150px; height: auto;">
+
 <div style="font-size: 20px;">
     • 姓名：林动<br>
     • 来自：浙江温州
 </div>
 
 ## 学习经历（高中起）
+
 <img src="/introduction/imgs/education.png">
 
 - 2023.11至今 上海交通大学<br>智慧能源创新学院 智慧能源工程（本科23级）  
