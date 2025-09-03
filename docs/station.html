@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>文体活动</title>
+        <title>动量小站</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="/introduction/imgs/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="/introduction/assets/css/headerstyle.css" />
@@ -52,15 +52,19 @@
         <div class="stackedit__html">
             <div id="markdown-content"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
     #markdown-content li {
         font-size: 18px;
     }
+    #markdown-content a {
+        font-size: 20px;
+    }
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
     // 动态加载并渲染 Markdown 文件
-    fetch('markdown/activity.md')
+    fetch('markdown/station.md')
         .then(response => response.text())
         .then(text => {
             document.getElementById('markdown-content').innerHTML = marked.parse(text);
