@@ -1,3 +1,4 @@
+<button class="mobile-menu-button">菜单</button>
 <div class="header">
     {% for item in site.data.navigation %}
         <a href="{{ item.link }}" class="headerItem">
@@ -6,20 +7,51 @@
     {% endfor %}
 </div>
 <style>
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+    .headerItem {
+        font-size: 16px;
+        padding: 8px 12px;
+        box-sizing: border-box;
+    }
+    .mobile-menu-button {
+        display: none;
+        background: #f0f0f0;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
     @media (max-width: 768px) {
+        .mobile-menu-button {
+            display: block;
+        }
         .header {
-            display: flex;
-            flex-wrap: wrap;
+            display: none;
+            flex-direction: column;
             gap: 5px;
             padding: 5px;
         }
+        .header.mobile-expanded {
+            display: flex;
+        }
         .headerItem {
-            flex: 0 0 calc(50% - 5px);
+            width: 100%;
             font-size: 14px;
             padding: 5px 8px;
             box-sizing: border-box;
             text-align: center;
-            margin-bottom: 5px;
         }
     }
 </style>
+<script>
+    document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+        const header = document.querySelector('.header');
+        header.classList.toggle('mobile-expanded');
+    });
+</script>
