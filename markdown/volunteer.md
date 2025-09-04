@@ -10,3 +10,5 @@
 - 2025.05 CUBAL32强赛志愿者 
 - 2024.12 上海马拉松志愿者
 - 2024.08 别克杯篮球赛志愿者
+
+<img src="/introduction/markdown/mdimgs/marathon.jpg" style="width: 400px; height: auto;">

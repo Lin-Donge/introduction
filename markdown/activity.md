@@ -10,3 +10,5 @@
 - 2023.12 上海交通大学“一二·九歌会”成员（机动）
 - 2023.11 上海交通大学机械与动力工程学院110周年院庆表演
 - 2023.08 上海交通大学新生骨干训练营+小班长
+
+<img src="/introduction/markdown/mdimgs/run.jpg" style="width: 400px; height: auto;">
